@@ -1,0 +1,2 @@
+include ':app', ':codeinputlib', ':materialdialog', ':progresswheel', ':supertoasts'
+include ':gpitcommon_chatify'

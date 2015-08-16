@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chatify</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_cilogin">CILoginActivity</string>
+    <string name="login_fullname">FULL NAME</string>
+    <string name="login_mobile_number">MOBILE NUMBER</string>
+</resources>

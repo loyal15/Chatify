@@ -1,0 +1,22 @@
+package pl.polidea.sectionedlist;
+
+/**
+ * Item definition including the section.
+ */
+public class SectionListItem {
+    public Object item;
+    public String section;
+    public Object tag;
+
+    public SectionListItem(final Object item, final String section) {
+        super();
+        this.item = item;
+        this.section = section;
+    }
+
+    @Override
+    public String toString() {
+        return item.toString();
+    }
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chatify.iml" filepath="$PROJECT_DIR$/Chatify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codeinputlib/codeinputlib.iml" filepath="$PROJECT_DIR$/codeinputlib/codeinputlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gpitcommon_chatify/gpitcommon_chatify.iml" filepath="$PROJECT_DIR$/gpitcommon_chatify/gpitcommon_chatify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialdialog/materialdialog.iml" filepath="$PROJECT_DIR$/materialdialog/materialdialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/progresswheel/progresswheel.iml" filepath="$PROJECT_DIR$/progresswheel/progresswheel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supertoasts/supertoasts.iml" filepath="$PROJECT_DIR$/supertoasts/supertoasts.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="black">#000000</color>
+	<color name="screen_bg">@color/white</color>
+	<color name="top_bar">#1DD2AF</color>
+	<color name="distance_color">#BBBBBB</color>
+	<color name="shop_name_color">#333333</color>
+	<color name="address_color">#919191</color>
+	<color name="top_item">#a6c</color>
+	<color name="sticky_item">#fff</color>
+	<color name="sticky_item_text">#09c</color>
+	<color name="listview_item">#282828</color>
+
+	<color name="red">#bf360c</color>
+	<color name="ripple_red">#ffbf5232</color>
+
+	<color name="material_teal">@color/material_deep_teal_500</color>
+	<color name="ripple_material_teal">#ff149691</color>
+
+	<color name="blue">#304f9f</color>
+	<color name="grey">@color/material_blue_grey_800</color>
+	<color name="light">@color/primary_material_light</color>
+
+	<color name="colorPrimary">@color/material_deep_teal_500</color>
+	<color name="colorPrimaryDark">@color/material_deep_teal_500</color>
+
+	<color name="windowBackgroundColor">#333333</color>
+	<color name="black_translucent">#80000000</color>
+	<color name="slidedrawer_listview_divider_color">#c6c6c6</color>
+	<color name="white">#ffffff</color>
+
+</resources>
