@@ -77,6 +77,10 @@ public class CIConst {
     public final static String DEV_AVIARY_CLIENT_SECRET = "78b5a36c-bf63-47ef-91b6-d8da3046a852";
     public final static String DEV_AVIARY_CLIENT_ID = "83af573e8c2b4848b62ee1d863926d36";
 
+    // Sinch
+    public final static String DEV_SINCH_APP_KEY = "";
+    public final static String PROD_SINCH_APP_KEY = "";
+
     public final static String PROD_PARSE_APP_ID = "";
     public final static String PROD_PARSE_CLIENT_KEY = "";
 

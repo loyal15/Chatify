@@ -69,4 +69,8 @@ dependencies {
     compile 'com.android.support:support-v4:22.2.0'
     compile project(':supertoasts')
     compile 'com.splunk.mint:mint:4.2.1'
+    compile files('libs/sinch-android-verification-1.0.3.jar')
+    compile 'com.google.android.gms:play-services:7.5.0'
+    compile 'com.google.api-client:google-api-client-android:1.20.0'
+    compile 'com.google.android.gms:play-services-location:7.5.0'
 }

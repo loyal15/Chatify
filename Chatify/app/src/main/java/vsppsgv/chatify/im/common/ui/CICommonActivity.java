@@ -377,7 +377,7 @@ public abstract class CICommonActivity extends ActionBarActivity {
         }
     }
 
-    protected void dismissDialog() {
+    protected void dismissProgress() {
         try {
             if (mProgressDlg != null && mProgressDlg.isShowing())
                 mProgressDlg.dismiss();

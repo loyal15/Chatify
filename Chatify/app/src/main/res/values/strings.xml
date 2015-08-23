@@ -6,4 +6,10 @@
     <string name="title_activity_cilogin">CILoginActivity</string>
     <string name="login_fullname">FULL NAME</string>
     <string name="login_mobile_number">MOBILE NUMBER</string>
+    <string name="verifying">Verifying...</string>
+    <string name="login_error_fill_fullname">Please fill your fullname</string>
+    <string name="login_error_fill_phonenumber">Please fill your phone number</string>
+    <string name="title_activity_ciprofile">CIProfileActivity</string>
+    <string name="title_activity_cimain">CIMainActivity</string>
+    <string name="common_progress_title_loading">Loading...</string>
 </resources>

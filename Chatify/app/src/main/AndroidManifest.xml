@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="vsppsgv.chatify.im">
+    package="vsppsgv.chatify.im" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -28,10 +28,10 @@
         android:name=".CIApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:logo="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:screenOrientation="portrait">
+        android:logo="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".CISplashActivity"
             android:label="@string/app_name" >
@@ -44,6 +44,14 @@
         <activity
             android:name=".page.signup.CILoginActivity"
             android:label="@string/title_activity_cilogin" >
+        </activity>
+        <activity
+            android:name=".page.signup.CIProfileActivity"
+            android:label="@string/title_activity_ciprofile" >
+        </activity>
+        <activity
+            android:name=".page.home.CIMainActivity"
+            android:label="@string/title_activity_cimain" >
         </activity>
     </application>
 

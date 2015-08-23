@@ -28,7 +28,7 @@
         android:layout_centerInParent="true">
 
         <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/edt_first_name"
+            android:id="@+id/etFullName"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"
@@ -47,13 +47,13 @@
             android:id="@+id/llCountryCode"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@+id/edt_first_name"
+            android:layout_below="@+id/etFullName"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:orientation="horizontal" >
 
             <android.support.v7.widget.AppCompatEditText
-                android:id="@+id/edt_country_code"
+                android:id="@+id/etCountryCode"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:gravity="center"
@@ -102,7 +102,7 @@
             tools:ignore="HardcodedText,SpUsage" />
 
         <com.gc.materialdesign.views.ButtonRectangle
-            android:id="@+id/btn_create_account"
+            android:id="@+id/brSignup"
             android:layout_width="100dp"
             android:layout_height="45dp"
             android:layout_alignRight="@+id/llCountryCode"
