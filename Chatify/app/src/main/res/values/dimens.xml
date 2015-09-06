@@ -30,6 +30,11 @@
     <dimen name="font_large1">22sp</dimen>
     <dimen name="font_large2">24sp</dimen>
     <dimen name="font_large3">26sp</dimen>
+    <dimen name="font_huge0">28sp</dimen>
+    <dimen name="font_huge1">30sp</dimen>
+    <dimen name="font_huge2">32sp</dimen>
+    <dimen name="font_huge3">34sp</dimen>
+
     <dimen name="font_emoji_text">16sp</dimen>
     <dimen name="font_emoji_icon">20sp</dimen>
 

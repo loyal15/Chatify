@@ -11,6 +11,7 @@
 	<color name="sticky_item">#fff</color>
 	<color name="sticky_item_text">#09c</color>
 	<color name="listview_item">#282828</color>
+	<color name="darkgray_color">#525252</color>
 
 	<color name="red">#bf360c</color>
 	<color name="ripple_red">#ffbf5232</color>

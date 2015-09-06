@@ -10,9 +10,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -21,8 +19,6 @@ import android.widget.TextView;
 import com.github.johnpersano.supertoasts.SuperToast;
 import com.gpit.android.util.NetworkUtils;
 import com.gpit.android.util.Utils;
-import com.splunk.mint.Mint;
-
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 import vsppsgv.chatify.im.CIAppSetting;
@@ -49,9 +45,7 @@ public abstract class CICommonActivity extends ActionBarActivity {
         super.onCreate(bundle);
 
         registerReceiver();
-
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.hide();
+        _initData();
     }
 
     @Override
@@ -355,6 +349,11 @@ public abstract class CICommonActivity extends ActionBarActivity {
         initUI();
     }
 
+    protected void _initData() {
+
+        initData();
+    }
+
     protected void showActionBar() {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayUseLogoEnabled(true);
@@ -406,5 +405,6 @@ public abstract class CICommonActivity extends ActionBarActivity {
 
     /************************* Abstract Interface ***********************/
     protected abstract void initUI();
+    protected abstract void initData();
     public abstract boolean supportOffline();
 }

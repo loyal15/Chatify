@@ -18,6 +18,8 @@ import vsppsgv.chatify.im.R;
 import vsppsgv.chatify.im.common.CIGPSClient;
 import vsppsgv.chatify.im.common.ui.CICommonActivity;
 import vsppsgv.chatify.im.model.CIConst;
+import vsppsgv.chatify.im.webapi.OnAPICompletedListener;
+import vsppsgv.chatify.im.webapi.chatify.CILoginSignupAPI;
 
 public class CILoginActivity extends CICommonActivity {
 
@@ -41,6 +43,11 @@ public class CILoginActivity extends CICommonActivity {
 
         mBRSignup = (ButtonRectangle)findViewById(R.id.brSignup);
         mBRSignup.setOnClickListener(mBRSignupClickListener);
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     @Override
@@ -125,6 +132,38 @@ public class CILoginActivity extends CICommonActivity {
         }
     }
 
+    private void registerUser() {
+
+        String fullName = mETFullName.getText().toString();
+
+        String phoneCode = mETCountryCode.getText().toString();
+        String phoneNumber = mETPhoneNum.getText().toString();
+
+        CILoginSignupAPI loginSignupAPI = new CILoginSignupAPI(this, true);
+
+        loginSignupAPI.registerUser(fullName, phoneCode + phoneNumber, new OnAPICompletedListener() {
+            @Override
+            public void onCompleted(Object result) {
+
+            }
+
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onFailed(Object result) {
+
+            }
+
+            @Override
+            public void onCanceled(Object result) {
+
+            }
+        });
+    }
+
     private View.OnClickListener mBRSignupClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -143,7 +182,8 @@ public class CILoginActivity extends CICommonActivity {
                 return;
             }
 
-            createVerification(phoneCode + phoneNumber);
+            registerUser();
+//            createVerification(phoneCode + phoneNumber);
         }
     };
 }

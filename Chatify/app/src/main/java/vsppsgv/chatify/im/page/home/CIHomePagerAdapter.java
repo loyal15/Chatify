@@ -1,23 +1,28 @@
-package vsppsgv.chatify.im.common.ui;
+package vsppsgv.chatify.im.page.home;
 
 import android.database.DataSetObserver;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.ActionBarActivity;
 
+import vsppsgv.chatify.im.R;
+import vsppsgv.chatify.im.common.ui.SlidingTabLayout;
 import vsppsgv.chatify.im.page.business.CIMapListFragment;
 import vsppsgv.chatify.im.page.chat.CIChatListFragment;
 
 /**
  * Created by administrator on 8/12/15.
  */
-public class ViewPagerAdapter extends FragmentPagerAdapter implements SlidingTabLayout.TabIconProvider {
+public class CIHomePagerAdapter extends FragmentPagerAdapter implements SlidingTabLayout.TabIconProvider {
 
-    final int PAGE_COUNT =3;
+    final int PAGE_COUNT = 3;
 
-    private static final String TAG = ViewPagerAdapter.class.getSimpleName();
+    private static final String TAG = CIHomePagerAdapter.class.getSimpleName();
 
     private static final int iconRes[] = {
+            R.mipmap.ic_map_white,
+            R.mipmap.ic_chat_white,
+            R.mipmap.ic_loyalty_white
             /*
             R.drawable.ic_tab_map,
             R.drawable.ic_tab_chat,
@@ -25,8 +30,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter implements SlidingTab
             */
     };
 
-    public ViewPagerAdapter(ActionBarActivity activity) {
-        super(activity.getSupportFragmentManager());
+    public CIHomePagerAdapter(FragmentManager manager) {
+        super(manager);
     }
 
     @Override
@@ -45,7 +50,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter implements SlidingTab
                 return new CIChatListFragment();
 
             case 2:
-//                return new CIBussinessDetailsFragment();
+                return new CIChatListFragment();
+
         }
 
         return null;
@@ -53,7 +59,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter implements SlidingTab
 
     @Override
     public int getCount() {
-        return 3;
+        return PAGE_COUNT;
     }
 
     @Override

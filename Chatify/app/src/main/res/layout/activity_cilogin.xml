@@ -36,7 +36,7 @@
             android:paddingLeft="@dimen/common_padding_small1"
             android:paddingRight="@dimen/common_padding_small2"
             android:gravity="center_vertical"
-            android:drawableLeft="@mipmap/ic_slider_user"
+            android:drawableLeft="@mipmap/ic_person_white"
             android:singleLine="true"
             android:textColor="@color/black"
             android:textColorHint="@color/black_translucent"

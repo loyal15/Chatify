@@ -16,16 +16,8 @@
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimaryDark" />
 
-        <vsppsgv.chatify.im.common.ui.SlidingTabLayout
-            android:id="@+id/sliding_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimaryDark"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp" />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
+        <FrameLayout
+            android:id="@+id/llContent"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
@@ -39,7 +31,9 @@
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
         android:divider="@color/slidedrawer_listview_divider_color"
-        android:dividerHeight="1dp"
-        android:drawSelectorOnTop="false"></ListView>
+        android:listSelector="@color/white"
+        android:dividerHeight="1px"
+        android:drawSelectorOnTop="false"
+        android:overScrollMode="never"></ListView>
 
 </android.support.v4.widget.DrawerLayout>

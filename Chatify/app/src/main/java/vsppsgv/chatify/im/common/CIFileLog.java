@@ -15,7 +15,7 @@ import vsppsgv.chatify.im.CIApp;
 
 public class CIFileLog {
 	
-	private static final String FILE_NAME = "bombom.log";
+	private static final String FILE_NAME = "chatify.log";
 	private static final String FORMAT_TIMESTAMP = "mm/dd/yyy hh:mm:ss";
 
 	public static void logMessage(String msg) {

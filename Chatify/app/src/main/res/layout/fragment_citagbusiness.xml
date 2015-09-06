@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/common_padding_small2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spCategory" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:hint="@string/tag_business_bussiness_name"
+                android:textSize="@dimen/font_medium"
+                app:met_baseColor="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="64"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_singleLineEllipsis="true"
+                android:id="@+id/etBusinessName"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:hint="@string/tag_business_email"
+                android:textSize="@dimen/font_medium"
+                app:met_baseColor="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="64"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_singleLineEllipsis="true"
+                android:id="@+id/etEmail"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:hint="@string/tag_business_phone"
+                android:textSize="@dimen/font_medium"
+                app:met_baseColor="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="64"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_singleLineEllipsis="true"
+                android:id="@+id/etPhone"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:hint="@string/tag_business_street"
+                android:textSize="@dimen/font_medium"
+                app:met_baseColor="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="64"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_singleLineEllipsis="true"
+                android:id="@+id/etStreet"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:hint="@string/tag_business_town"
+                android:textSize="@dimen/font_medium"
+                app:met_baseColor="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="64"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_singleLineEllipsis="true"
+                android:id="@+id/etTown"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:hint="@string/tag_business_city"
+                android:textSize="@dimen/font_medium"
+                app:met_baseColor="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="64"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_singleLineEllipsis="true"
+                android:id="@+id/etCity"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:hint="@string/tag_business_state"
+                android:textSize="@dimen/font_medium"
+                app:met_baseColor="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="64"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_singleLineEllipsis="true"
+                android:id="@+id/etState"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:hint="@string/tag_business_country"
+                android:textSize="@dimen/font_medium"
+                app:met_baseColor="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="64"
+                app:met_primaryColor="@color/colorPrimaryDark"
+                app:met_singleLineEllipsis="true"
+                android:id="@+id/etCountry"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/brClearAll"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_alignRight="@+id/llCountryCode"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_padding_medium2"
+                    android:text="@string/tab_business_clear"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/brSend"
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_alignRight="@+id/llCountryCode"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_padding_medium2"
+                    android:text="@string/tab_business_send"
+                    android:color="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

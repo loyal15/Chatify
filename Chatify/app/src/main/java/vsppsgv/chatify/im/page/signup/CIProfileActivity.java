@@ -1,18 +1,33 @@
 package vsppsgv.chatify.im.page.signup;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import vsppsgv.chatify.im.R;
+import vsppsgv.chatify.im.common.ui.CICommonActivity;
 
-public class CIProfileActivity extends ActionBarActivity {
+public class CIProfileActivity extends CICommonActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ciprofile);
+    }
+
+    @Override
+    protected void initUI() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public boolean supportOffline() {
+        return false;
     }
 
     @Override

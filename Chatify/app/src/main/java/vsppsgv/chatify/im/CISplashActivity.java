@@ -1,11 +1,13 @@
 package vsppsgv.chatify.im;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import vsppsgv.chatify.im.common.ui.CICommonActivity;
+import vsppsgv.chatify.im.page.home.CIMainActivity;
+import vsppsgv.chatify.im.page.signup.CILoginActivity;
 
 
 public class CISplashActivity extends CICommonActivity {
@@ -18,6 +20,12 @@ public class CISplashActivity extends CICommonActivity {
 
     @Override
     protected void initUI() {
+
+        showMainScreen();
+    }
+
+    @Override
+    protected void initData() {
 
     }
 
@@ -46,5 +54,17 @@ public class CISplashActivity extends CICommonActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showLoginScreen() {
+
+        Intent intent = new Intent(this, CILoginActivity.class);
+        startActivity(intent);
+    }
+
+    private void showMainScreen() {
+
+        Intent intent = new Intent(this, CIMainActivity.class);
+        startActivity(intent);
     }
 }
