@@ -1,2 +1,2 @@
-include ':app', ':codeinputlib', ':materialdialog', ':progresswheel', ':supertoasts', ':preferencefragment'
+include ':app', ':codeinputlib', ':materialdialog', ':progresswheel', ':supertoasts', ':preferencefragment', ':MaterialTabsModule'
 include ':gpitcommon_chatify'

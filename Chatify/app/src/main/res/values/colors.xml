@@ -31,4 +31,8 @@
 	<color name="slidedrawer_listview_divider_color">#c6c6c6</color>
 	<color name="white">#ffffff</color>
 
+	<color name="background_listitem_normal">#ffefefef</color>
+	<color name="background_listitem_pressed">#c6c6c6</color>
+	<color name="color_background_tab">#e1f6ed</color>
+
 </resources>

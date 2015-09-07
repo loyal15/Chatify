@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <it.neokree.materialtabs.MaterialTabHost
+        android:id="@+id/thPage"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:materialTabsTextColor="@color/colorPrimary"
+        app:materialTabsPrimaryColor="@color/color_background_tab"
+        app:accentColor="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <vsppsgv.chatify.im.page.chat.CIBusinessChatListView
+            android:id="@+id/vBusinessChatList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <vsppsgv.chatify.im.page.chat.CICustomerChatListView
+            android:id="@+id/vCustomerChatList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

@@ -86,4 +86,6 @@ dependencies {
     compile 'com.jenzz:materialpreference:1.3'
     compile 'com.github.machinarius:preferencefragment:0.1.1'
     compile project(':preferencefragment')
+    compile project(':MaterialTabsModule')
+    compile 'org.apache.httpcomponents:httpcore:4.3.2'
 }

@@ -42,4 +42,12 @@
     <string name="account_setting_sound">Sound</string>
     <string name="account_account">Account</string>
     <string name="account_account_delete_account">Delete Account</string>
+    <string name="chat_business">Business</string>
+    <string name="chat_customer">Customer</string>
+    <string name="contactus_fullname">FULL NAME</string>
+    <string name="contactus_email">EMAIL</string>
+    <string name="contactus_phone_number">PHONE NUMBER</string>
+    <string name="contactus_subject">SUBJECT</string>
+    <string name="contactus_reason">REASON</string>
+    <string name="contactus_yourmessage">YOUR MESSAGE</string>
 </resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/common_padding_small2"
+    android:paddingRight="@dimen/common_padding_small2"
+    android:paddingTop="@dimen/common_padding_medium"
+    android:paddingBottom="@dimen/common_padding_medium"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_chat_history_user"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/imageView" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="@dimen/common_padding_small2"
+        android:layout_marginLeft="@dimen/common_padding_medium"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView"
+            android:textColor="@color/black"
+            fontPath="@string/font_roboto_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView2"
+            android:textColor="@color/black_translucent"
+            fontPath="@string/font_roboto_regular"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="@dimen/font_small0"
+        android:id="@+id/tvCreatedDate"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        fontPath="@string/font_roboto_regular"/>
+</LinearLayout>

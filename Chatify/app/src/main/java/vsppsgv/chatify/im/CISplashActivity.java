@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import vsppsgv.chatify.im.common.ui.CICommonActivity;
-import vsppsgv.chatify.im.page.home.CIMainActivity;
 import vsppsgv.chatify.im.page.signup.CILoginActivity;
 
 
@@ -64,7 +63,7 @@ public class CISplashActivity extends CICommonActivity {
 
     private void showMainScreen() {
 
-        Intent intent = new Intent(this, CIMainActivity.class);
+        Intent intent = new Intent(this, CILoginActivity.class);
         startActivity(intent);
     }
 }
