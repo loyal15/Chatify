@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import vsppsgv.chatify.im.common.ui.CICommonActivity;
 import vsppsgv.chatify.im.page.signup.CILoginActivity;
+import vsppsgv.chatify.im.webapi.xmpp.CIXmppChatAPI;
 
 
 public class CISplashActivity extends CICommonActivity {
@@ -63,7 +64,11 @@ public class CISplashActivity extends CICommonActivity {
 
     private void showMainScreen() {
 
-        Intent intent = new Intent(this, CILoginActivity.class);
-        startActivity(intent);
+
+        CIXmppChatAPI chatAPI = new CIXmppChatAPI(this, false);
+        chatAPI.connectToChatifyServer();
+
+//        Intent intent = new Intent(this, CILoginActivity.class);
+//        startActivity(intent);
     }
 }

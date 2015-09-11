@@ -115,9 +115,9 @@
     <orderEntry type="library" exported="" name="preferencefragment-0.1.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-appstate-7.5.0" level="project" />
     <orderEntry type="library" exported="" name="sinch-android-verification-1.0.3" level="project" />
-    <orderEntry type="library" exported="" name="httpcore-4.3.2" level="project" />
-    <orderEntry type="library" exported="" name="smack-resolver-minidns-4.1.0-rc1" level="project" />
     <orderEntry type="library" exported="" name="smack-bosh-4.1.0-rc1" level="project" />
+    <orderEntry type="library" exported="" name="smack-resolver-minidns-4.1.0-rc1" level="project" />
+    <orderEntry type="library" exported="" name="httpcore-4.4.2" level="project" />
     <orderEntry type="library" exported="" name="play-services-cast-7.5.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-22.2.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-location-7.5.0" level="project" />
