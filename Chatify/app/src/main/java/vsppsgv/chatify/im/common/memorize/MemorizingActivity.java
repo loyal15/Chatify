@@ -35,7 +35,7 @@ import android.os.Bundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import de.meisterfuu.smackdemo.R;
+import vsppsgv.chatify.im.R;
 
 public class MemorizingActivity extends Activity
 		implements OnClickListener,OnCancelListener {

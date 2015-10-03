@@ -29,7 +29,6 @@ public class CICustomerChatListView extends LinearLayout {
     }
 
     private void initUI(Context context, ViewGroup view) {
-
-
+        
     }
 }

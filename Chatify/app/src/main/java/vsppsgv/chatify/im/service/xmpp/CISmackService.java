@@ -115,6 +115,6 @@ public class CISmackService extends Service {
             mConnection.connect();
         } catch ( IOException | SmackException | XMPPException e) {
             e.printStackTrace();
-        }
+           }
     }
 }

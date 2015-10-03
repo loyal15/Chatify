@@ -5,27 +5,36 @@ import android.content.Context;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.gpit.android.util.Utils;
+
 import org.jivesoftware.smack.ConnectionConfiguration;
 import org.jivesoftware.smack.ConnectionListener;
+import org.jivesoftware.smack.PacketCollector;
+import org.jivesoftware.smack.PacketListener;
 import org.jivesoftware.smack.SmackConfiguration;
 import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
-import org.jivesoftware.smack.chat.Chat;
-import org.jivesoftware.smack.chat.ChatManager;
-import org.jivesoftware.smack.packet.Presence;
+import org.jivesoftware.smack.filter.PacketFilter;
+import org.jivesoftware.smack.packet.IQ;
+import org.jivesoftware.smack.packet.Stanza;
+import org.jivesoftware.smack.provider.ProviderManager;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
+import org.jivesoftware.smackx.iqregister.AccountManager;
 
 import java.io.IOException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.X509TrustManager;
 
 import vsppsgv.chatify.im.common.memorize.MemorizingTrustManager;
+import vsppsgv.chatify.im.model.CIConst;
 
 
 /**
@@ -47,6 +56,7 @@ public class CISmackConnection implements ConnectionListener {
     private ArrayList<String> mRoster;
     private BroadcastReceiver mReceiver;
     private Context mContext;
+    private ProviderManager mProviderManager = new ProviderManager();
 
     public CISmackConnection(Context pContext) {
         Log.i(TAG, "ChatConnection()");
@@ -82,9 +92,12 @@ public class CISmackConnection implements ConnectionListener {
             e.printStackTrace();
         }
 
+        String resourceName = "Android" + "-" + Utils.getOSVersion() + "-" + Utils.getDeviceName(mContext) + "-" + Utils.getAppVersionCode(mContext);
+
         XMPPTCPConnectionConfiguration config = XMPPTCPConnectionConfiguration.builder()
-                .setUsernameAndPassword(mUsername, mPassword)
+                .allowEmptyOrNullUsernames()
                 .setServiceName(mServiceName)
+                .setResource(resourceName)
                 .setHost("52.28.128.116")
                 .setPort(443)
                 .setSecurityMode(ConnectionConfiguration.SecurityMode.disabled)
@@ -96,15 +109,23 @@ public class CISmackConnection implements ConnectionListener {
         try {
 
             mConnection.connect();
-            mConnection.login();
 
-            Presence presence = new Presence(Presence.Type.unavailable);
-            presence.setStatus("GOGOGO");
-            mConnection.sendPacket(presence);
+
+//            registerChatifyUser();
+
+            mConnection.login("4915735983513", "0217FBCCB533B54F2575F7A6BFDD7466");
+            /*
+            mConnection.sendPacket();
+
+            Roster roster = Roster.getInstanceFor(mConnection);
+            roster.setRosterLoadedAtLogin(true);
+            roster.setSubscriptionMode(Roster.SubscriptionMode.accept_all);
+            // jid: String, user: String, groups: String[]
+            roster.createEntry("anna", "Anna", null);
+            roster.createEntry("theepan", "Theepan", null);
+            roster.createEntry("ugkarthik", "Ugkarthik", null);
 
             ChatManager chatmanager = ChatManager.getInstanceFor(mConnection);
-
-
             Chat newChat = chatmanager.createChat("alice@chatify.im");
 
             try {
@@ -114,12 +135,26 @@ public class CISmackConnection implements ConnectionListener {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+            */
 
         } catch (SmackException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (XMPPException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void login() {
+
+        try {
+            mConnection.login(mUsername, mPassword);
+        } catch (XMPPException e) {
+            e.printStackTrace();
+        } catch (SmackException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -134,6 +169,97 @@ public class CISmackConnection implements ConnectionListener {
         if(mReceiver != null){
             mApplicationContext.unregisterReceiver(mReceiver);
             mReceiver = null;
+        }
+    }
+
+    public void registerChatifyUser() {
+
+        Map<String,String> attributes=new HashMap<String,String>();
+        attributes.put("code", "12345");
+
+        AccountManager accManager = AccountManager.getInstance(mConnection);
+        try {
+            accManager.createAccount(CIIQStanzaManager.USERNAME, CIIQStanzaManager.PASSWORD, attributes);
+        } catch (SmackException.NoResponseException e) {
+            e.printStackTrace();
+        } catch (XMPPException.XMPPErrorException e) {
+            e.printStackTrace();
+        } catch (SmackException.NotConnectedException e) {
+            e.printStackTrace();
+        }
+
+        /*
+        Stanza registerStanza = CIIQStanzaManager.createIQStanzaForRegister(mConnection.getServiceName(), mUsername, mPassword, IQ.Type.set);
+
+        try {
+
+            mConnection.sendPacket(registerStanza);
+
+            PacketFilter filter = new PacketFilter() {
+                @Override
+                public boolean accept(Stanza packet) {
+                    return true;
+                }
+            };
+
+            PacketCollector collector = mConnection.createPacketCollector(filter);
+
+            IQ response= collector.nextResult(SmackConfiguration.getDefaultPacketReplyTimeout());
+
+            collector.cancel();
+
+            if (response == null) {
+
+            }
+
+        } catch (SmackException.NotConnectedException e) {
+            e.printStackTrace();
+        }
+        */
+
+        Stanza getStanza = CIIQStanzaManager.createIQStanzaForRegister(mConnection.getServiceName(), mUsername, mPassword, IQ.Type.get);
+
+        try {
+
+            PacketCollector collector = mConnection.createPacketCollectorAndSend(new PacketFilter() {
+                @Override
+                public boolean accept(Stanza packet) {
+                    return true;
+                }
+            }, getStanza);
+
+            IQ response= collector.nextResult(SmackConfiguration.getDefaultPacketReplyTimeout());
+
+            collector.cancel();
+
+            if (response == null) {
+
+            }
+
+        } catch (SmackException.NotConnectedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void registerDeviceInfo(String token, String udid, long timezoneOffset, boolean enabled) {
+
+        Stanza deviceStanza = CIIQStanzaManager.createIQStanzaForRegisterDeviceInfo(token, udid, timezoneOffset, CIConst.DEVICE_TYPE_ANDROID, enabled ? 1 : 0);
+
+        try {
+            mConnection.sendStanzaWithResponseCallback(deviceStanza, new PacketFilter() {
+                @Override
+                public boolean accept(Stanza packet) {
+                    return true;
+                }
+            }, new PacketListener() {
+                @Override
+                public void processPacket(Stanza packet) throws SmackException.NotConnectedException {
+
+                }
+            });
+        } catch (SmackException.NotConnectedException e) {
+            e.printStackTrace();
         }
     }
 

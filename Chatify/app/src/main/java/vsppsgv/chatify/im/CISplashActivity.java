@@ -1,13 +1,17 @@
 package vsppsgv.chatify.im;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.gpit.android.util.Utils;
+
 import vsppsgv.chatify.im.common.ui.CICommonActivity;
 import vsppsgv.chatify.im.page.signup.CILoginActivity;
-import vsppsgv.chatify.im.webapi.xmpp.CIXmppChatAPI;
+import vsppsgv.chatify.im.service.xmpp.CISmackService;
 
 
 public class CISplashActivity extends CICommonActivity {
@@ -16,6 +20,12 @@ public class CISplashActivity extends CICommonActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cisplash);
+
+        String resourceName = "Android" + "-" + Utils.getOSVersion() + "-" + Utils.getDeviceName(this) + "-" + Utils.getAppVersionCode(this);
+
+        if (resourceName != null) {
+
+        }
     }
 
     @Override
@@ -64,9 +74,16 @@ public class CISplashActivity extends CICommonActivity {
 
     private void showMainScreen() {
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        prefs.edit()
+                .putString("xmpp_jid", "bastian@chatify.im")
+                .putString("xmpp_password", "abcd1234")
+                .commit();
 
-        CIXmppChatAPI chatAPI = new CIXmppChatAPI(this, false);
-        chatAPI.connectToChatifyServer();
+        Intent intent = new Intent(this, CISmackService.class);
+        this.startService(intent);
+//        CIXmppChatAPI chatAPI = new CIXmppChatAPI(this, false);
+//        chatAPI.connectToChatifyServer();
 
 //        Intent intent = new Intent(this, CILoginActivity.class);
 //        startActivity(intent);

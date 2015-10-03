@@ -97,4 +97,6 @@ public class CIConst {
     public static final int IMAGE_THUMB_AVATAR_HEIGHT = 100;
     public static final int IMAGE_THUMB_MOMENT_WIDTH = 400;
     public static final int IMAGE_MOMENT_WIDTH = 600;
+
+    public static final int DEVICE_TYPE_ANDROID = 3;
 }

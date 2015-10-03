@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -20,7 +21,9 @@ import vsppsgv.chatify.im.R;
  */
 public class CIMapListFragment extends Fragment {
 
-    private MapView         mMapView;
+    private MapView         mMVBusiness;
+    private ListView        mLVBusiness;
+
     private GoogleMap       mMap;
 
 
@@ -45,11 +48,11 @@ public class CIMapListFragment extends Fragment {
 
     private void initUI(ViewGroup view, Bundle savedInstanceState) {
 
-        mMapView = (MapView) view.findViewById(R.id.mapview);
-        mMapView .onCreate(savedInstanceState);
+        mMVBusiness = (MapView) view.findViewById(R.id.mvBusiness);
+        mMVBusiness.onCreate(savedInstanceState);
 
         // Gets to GoogleMap from the MapView and does initialization stuff
-        mMap = mMapView.getMap();
+        mMap = mMVBusiness.getMap();
         mMap.getUiSettings().setMyLocationButtonEnabled(false);
         mMap.setMyLocationEnabled(true);
 
@@ -59,23 +62,25 @@ public class CIMapListFragment extends Fragment {
         // Updates the location and zoom of the MapView
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(43.1, -87.9), 10);
         mMap.animateCamera(cameraUpdate);
+
+        mLVBusiness = (ListView)view.findViewById(R.id.lvBusiness);
     }
 
     @Override
     public void onResume() {
-        mMapView.onResume();
+        mMVBusiness.onResume();
         super.onResume();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mMapView.onDestroy();
+        mMVBusiness.onDestroy();
     }
 
     @Override
     public void onLowMemory() {
         super.onLowMemory();
-        mMapView.onLowMemory();
+        mMVBusiness.onLowMemory();
     }
 }

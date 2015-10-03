@@ -582,9 +582,9 @@ public class MemorizingTrustManager implements X509TrustManager {
 				master.getString(R.string.mtm_notification),
 				System.currentTimeMillis());
 		PendingIntent call = PendingIntent.getActivity(master, 0, intent, 0);
-		n.setLatestEventInfo(master.getApplicationContext(),
-				master.getString(R.string.mtm_notification),
-				certName, call);
+//		n.setLatestEventInfo(master.getApplicationContext(),
+//				master.getString(R.string.mtm_notification),
+//				certName, call);
 		n.flags |= Notification.FLAG_AUTO_CANCEL;
 
 		notificationManager.notify(NOTIFICATION_ID + decisionId, n);

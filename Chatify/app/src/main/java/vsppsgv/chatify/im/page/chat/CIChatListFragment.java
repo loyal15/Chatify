@@ -25,11 +25,10 @@ public class CIChatListFragment extends Fragment implements MaterialTabListener 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
-
+            
         }
-
-
     }
 
     @Override
