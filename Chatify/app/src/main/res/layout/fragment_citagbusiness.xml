@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/common_padding_small2">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="@dimen/common_padding_medium"
         android:id="@+id/scrollView">
 
         <LinearLayout
@@ -18,9 +18,12 @@
 
 
             <Spinner
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/spCategory" />
+                android:id="@+id/spCategory"
+                android:layout_marginLeft="@dimen/common_padding_small1"
+                android:dropDownWidth="200dp"
+                android:prompt="@string/tag_business_category"/>
 
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:layout_width="match_parent"
@@ -28,6 +31,7 @@
                 android:layout_marginLeft="@dimen/common_padding_small2"
                 android:hint="@string/tag_business_bussiness_name"
                 android:textSize="@dimen/font_medium"
+                app:met_helperTextColor="@color/grey"
                 app:met_baseColor="@color/colorPrimaryDark"
                 app:met_floatingLabel="highlight"
                 app:met_maxCharacters="64"
@@ -113,18 +117,13 @@
                 app:met_singleLineEllipsis="true"
                 android:id="@+id/etState"/>
 
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:layout_width="match_parent"
+            <Spinner
+                android:id="@+id/spCountry"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
+                android:dropDownWidth="210dp"
                 android:layout_marginLeft="@dimen/common_padding_small2"
-                android:hint="@string/tag_business_country"
-                android:textSize="@dimen/font_medium"
-                app:met_baseColor="@color/colorPrimaryDark"
-                app:met_floatingLabel="highlight"
-                app:met_maxCharacters="64"
-                app:met_primaryColor="@color/colorPrimaryDark"
-                app:met_singleLineEllipsis="true"
-                android:id="@+id/etCountry"/>
+                android:hint="@string/tag_business_country"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -140,7 +139,7 @@
                     android:background="@color/white"
                     android:gravity="center_vertical"
                     android:layout_marginTop="@dimen/common_padding_medium2"
-                    android:text="@string/tab_business_clear"
+                    android:text="@string/tag_business_clear"
                     android:textColor="@color/colorPrimaryDark"/>
 
                 <com.gc.materialdesign.views.ButtonRectangle
@@ -151,7 +150,7 @@
                     android:background="@color/colorPrimaryDark"
                     android:gravity="center_vertical"
                     android:layout_marginTop="@dimen/common_padding_medium2"
-                    android:text="@string/tab_business_send"
+                    android:text="@string/tag_business_send"
                     android:color="@color/white"/>
 
             </LinearLayout>

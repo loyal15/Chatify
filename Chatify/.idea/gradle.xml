@@ -10,10 +10,13 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/MaterialTabsModule" />
+            <option value="$PROJECT_DIR$/SectionedListView" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/circualreveal" />
             <option value="$PROJECT_DIR$/codeinputlib" />
             <option value="$PROJECT_DIR$/gpitcommon_chatify" />
             <option value="$PROJECT_DIR$/materialdialog" />
+            <option value="$PROJECT_DIR$/otr4j" />
             <option value="$PROJECT_DIR$/preferencefragment" />
             <option value="$PROJECT_DIR$/progresswheel" />
             <option value="$PROJECT_DIR$/supertoasts" />

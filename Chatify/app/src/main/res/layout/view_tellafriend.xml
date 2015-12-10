@@ -34,6 +34,9 @@
             android:text="@string/share_on_facebook"
             android:id="@+id/btShareFacebook"
             android:textColor="@color/darkgray_color"
+            android:background="@color/white"
+            android:textSize="@dimen/font_medium"
+            android:textAllCaps="false"
             fontPath="@string/font_roboto_regular"/>
 
     </LinearLayout>
@@ -41,7 +44,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="1px"
+        android:layout_height="0.5px"
         android:layout_marginLeft="@dimen/common_padding_large"
         android:layout_marginRight="@dimen/common_padding_large"
         android:background="@color/darkgray_color"></LinearLayout>
@@ -66,13 +69,16 @@
             android:text="@string/share_on_twitter"
             android:id="@+id/btShareTwitter"
             android:textColor="@color/darkgray_color"
+            android:background="@color/white"
+            android:textSize="@dimen/font_medium"
+            android:textAllCaps="false"
             fontPath="@string/font_roboto_regular"/>
     </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="1px"
+        android:layout_height="0.5px"
         android:layout_marginLeft="@dimen/common_padding_large"
         android:layout_marginRight="@dimen/common_padding_large"
         android:background="@color/darkgray_color"></LinearLayout>

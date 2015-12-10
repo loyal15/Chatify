@@ -11,11 +11,12 @@
     android:background="@color/white">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/avatar_circle_small_width"
+        android:layout_height="@dimen/avatar_circle_small_width"
         android:src="@mipmap/ic_chat_history_user"
         android:layout_gravity="center_vertical"
-        android:id="@+id/imageView" />
+        android:visibility="invisible"
+        android:id="@+id/ivBusiness" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -30,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/textView"
+            android:id="@+id/tvName"
             android:textColor="@color/black"
             fontPath="@string/font_roboto_regular"/>
 
@@ -38,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/textView2"
+            android:id="@+id/tvLocation"
             android:textColor="@color/black_translucent"
             fontPath="@string/font_roboto_regular"/>
     </LinearLayout>
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:textSize="@dimen/font_small0"
-        android:id="@+id/tvCreatedDate"
+        android:id="@+id/tvDistance"
         android:textColor="@color/black"
         android:layout_gravity="center_vertical"
         fontPath="@string/font_roboto_regular"/>

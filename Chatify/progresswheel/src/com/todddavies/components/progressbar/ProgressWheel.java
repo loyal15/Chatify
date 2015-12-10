@@ -242,7 +242,7 @@ public class ProgressWheel extends View {
 
         barColor = a.getColor(R.styleable.ProgressWheel_barColor, barColor);
 
-        barLength = (int) a.getDimension(R.styleable.ProgressWheel_barLength,
+        barLength = (int) a.getDimension(R.styleable.ProgressWheel_barLeng,
                 barLength);
 
         textSize = (int) a.getDimension(R.styleable.ProgressWheel_textSize,

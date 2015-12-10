@@ -76,24 +76,12 @@
         app:met_primaryColor="@color/colorPrimaryDark"
         app:met_singleLineEllipsis="true" />
 
-    <com.rengwuxian.materialedittext.MaterialEditText
-        android:id="@+id/etReason"
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/common_padding_medium1"
         android:layout_marginRight="@dimen/common_padding_medium1"
-        android:layout_centerHorizontal="true"
-        android:textColorHint="@color/grey"
-        android:drawableRight="@drawable/spinner_arrow"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:hint="REASON"
-        android:singleLine="true"
-        android:textSize="@dimen/font_medium"
-        app:met_baseColor="@color/colorPrimaryDark"
-        app:met_floatingLabel="highlight"
-        app:met_primaryColor="@color/colorPrimaryDark"
-        app:met_singleLineEllipsis="true" />
+        android:id="@+id/spReason"></Spinner>
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/etMessage"
@@ -127,7 +115,7 @@
             android:background="@color/white"
             android:gravity="center_vertical"
             android:layout_marginTop="10dp"
-            android:text="@string/tab_business_clear"
+            android:text="@string/tag_business_clear"
             android:textColor="@color/colorPrimaryDark"/>
 
         <com.gc.materialdesign.views.ButtonRectangle
@@ -135,7 +123,7 @@
             android:layout_width="100dp"
             android:layout_height="45dp"
             android:layout_marginTop="10dp"
-            android:text="@string/tab_business_send"
+            android:text="@string/tag_business_send"
             android:background="@color/colorPrimaryDark"
             android:color="@color/white"/>
 

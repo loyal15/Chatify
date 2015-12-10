@@ -67,15 +67,28 @@
                 android:textSize="@dimen/font_medium"
                 android:drawableLeft="@mipmap/ic_login_phone"
                 android:drawablePadding="@dimen/common_padding_small1"
+                android:visibility="gone"
                 tools:ignore="HardcodedText,SpUsage,RtlHardcoded" >
 
             </android.support.v7.widget.AppCompatEditText>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:src="@mipmap/ic_login_phone"/>
+
+            <Spinner
+                android:id="@+id/spCountry"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:dropDownWidth="200dp"/>
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/etMobileNumber"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginLeft="@dimen/common_padding_small2"
                 android:hint="@string/login_mobile_number"
                 android:inputType="number"
                 android:paddingLeft="10dp"
