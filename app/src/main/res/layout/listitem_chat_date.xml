@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingPrefix"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="@dimen/font_small2"
+        android:id="@+id/tvDate"
+        android:gravity="center"
+        android:padding="@dimen/common_padding_medium"
+        android:layout_centerHorizontal="true"
+        fontPath="@string/font_roboto_regular"/>
+
+</RelativeLayout>

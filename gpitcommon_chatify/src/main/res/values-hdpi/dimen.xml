@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="ambilwarna_hsvHeight">240dp</dimen>
+	<dimen name="ambilwarna_hsvWidth">240dp</dimen>
+	<dimen name="ambilwarna_hueWidth">30dp</dimen>
+	<dimen name="ambilwarna_spacer">8dp</dimen>
+	<dimen name="seekbar_touch_plus_range">30dp</dimen>
+	<dimen name="seekbar_text_padding_top">5dp</dimen>
+	
+	<!-- Common -->
+    <dimen name="popup_margin_small">15dp</dimen>
+    <dimen name="popup_margin">25dp</dimen>
+    <dimen name="popup_margin_medium">30dp</dimen>
+    <dimen name="popup_margin_large">50dp</dimen>
+    <dimen name="popup_margin_largest">70dp</dimen>
+    <dimen name="popup_margin_lateral">30dp</dimen>
+    <dimen name="popup_margin_lateral_large">40dp</dimen>
+    <dimen name="smallest_margin">2dp</dimen>
+    <dimen name="small_margin">7dp</dimen>
+    <dimen name="medium_margin">10dp</dimen>
+    <dimen name="medium_margin2">7dp</dimen>
+    <dimen name="large_margin">20dp</dimen>
+    <dimen name="largest_margin">30dp</dimen>
+</resources>

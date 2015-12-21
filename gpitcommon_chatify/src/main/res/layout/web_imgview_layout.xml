@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_height="fill_parent" android:layout_width="fill_parent">
+
+    <com.gpit.android.ui.common.RoundedImageView
+        android:id="@+id/ivWebImageView"
+        android:layout_height="fill_parent" android:layout_width="fill_parent" android:scaleType="centerCrop"
+        android:src="@drawable/web_image"/>
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_gravity="center" android:visibility="gone"/>
+
+</FrameLayout>

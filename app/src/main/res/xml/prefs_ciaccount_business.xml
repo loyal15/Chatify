@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <com.jenzz.materialpreference.PreferenceCategory android:title="@string/account_profile"
+        android:key="pfcProfile">
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfileFullName"
+            android:title="@string/fullname"/>
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfilePhoneNum"
+            android:title="@string/phonenumber"/>
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfileLandLine"
+            android:title="@string/landline"/>
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfileStreet"
+            android:title="@string/street"/>
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfileTown"
+            android:title="@string/town"/>
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfileCity"
+            android:title="@string/city"/>
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfileState"
+            android:title="@string/state"/>
+    </com.jenzz.materialpreference.PreferenceCategory>
+
+    <com.jenzz.materialpreference.PreferenceCategory android:title="@string/account_setting">
+
+        <com.jenzz.materialpreference.SwitchPreference
+            android:key="pfSettingNotification"
+            android:title="@string/account_setting_notifications"
+            />
+        <com.jenzz.materialpreference.SwitchPreference
+            android:key="pfSettingSound"
+            android:title="@string/account_setting_sound"
+            />
+    </com.jenzz.materialpreference.PreferenceCategory>
+
+    <com.jenzz.materialpreference.PreferenceCategory android:title="@string/account_account">
+        <com.jenzz.materialpreference.Preference
+            android:key="pfAccountDeleteAccount"
+            android:title="@string/account_account_delete_account"/>
+    </com.jenzz.materialpreference.PreferenceCategory>
+
+</PreferenceScreen>

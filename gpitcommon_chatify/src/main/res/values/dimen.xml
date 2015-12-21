@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="ambilwarna_hsvHeight">240dp</dimen>
+	<dimen name="ambilwarna_hsvWidth">240dp</dimen>
+	<dimen name="ambilwarna_hueWidth">30dp</dimen>
+	<dimen name="ambilwarna_spacer">8dp</dimen>
+	<dimen name="seekbar_touch_plus_range">30dp</dimen>
+	<dimen name="seekbar_text_padding_top">3dp</dimen>
+	
+    <!-- Common -->
+    <dimen name="common_padding_small0">2dp</dimen>
+    <dimen name="common_padding_small1">5dp</dimen>
+    <dimen name="common_reverse_padding_small1">-5dp</dimen>
+    <dimen name="common_padding_small2">10dp</dimen>
+    <dimen name="common_reverse_padding_small2">-10dp</dimen>
+    <dimen name="common_padding_medium">15dp</dimen>
+    <dimen name="common_padding_medium1">20dp</dimen>
+    <dimen name="common_reverse_padding_medium1">-20dp</dimen>
+    <dimen name="common_padding_medium2">25dp</dimen>
+    <dimen name="common_padding_large">30dp</dimen>
+    
+   	<!-- Font Size -->
+   	<dimen name="font_small0">8sp</dimen>
+   	<dimen name="font_small1">10sp</dimen>
+    <dimen name="font_small2">12sp</dimen>
+    <dimen name="font_medium">14sp</dimen>
+    <dimen name="font_medium1">16sp</dimen>
+    <dimen name="font_medium2">18sp</dimen>
+    <dimen name="font_large">24sp</dimen>
+</resources>

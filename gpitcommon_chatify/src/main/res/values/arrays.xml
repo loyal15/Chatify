@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Image extensions -->
+	<string-array name="image_extensions">
+	    <item>.jp2</item>
+	    <item>.j2k</item>
+	    <item>.jpf</item>
+	    <item>.jpx</item>
+	    <item>.jpm</item>
+	    <item>.mj2</item>
+	    <item>.jpg</item>
+	    <item>.tif</item>
+	    <item>.tiff</item>
+	    <item>.3fr</item>
+	    <item>.ari</item>
+	    <item>.arw</item>
+	    <item>.bay</item>
+	    <item>.crw</item>
+	    <item>.cr2</item>
+	    <item>.cap</item>
+	    <item>.dcs</item>
+	    <item>.dcr</item>
+	    <item>.dng</item>
+	    <item>.drf</item>
+	    <item>.eip</item>
+	    <item>.erf</item>
+	    <item>.fff</item>
+	    <item>.iiq</item>
+	    <item>.k25</item>
+	    <item>.kdc</item>
+	    <item>.mef</item>
+	    <item>.mos</item>
+	    <item>.mrw</item>
+	    <item>.nef</item>
+	    <item>.nrw</item>
+	    <item>.obm</item>
+	    <item>.orf</item>
+	    <item>.pef</item>
+	    <item>.ptx</item>
+	    <item>.pxn</item>
+	    <item>.r3d</item>
+	    <item>.raf</item>
+	    <item>.raw</item>
+	    <item>.rwl</item>
+	    <item>.rw2</item>
+	    <item>.rwz</item>
+	    <item>.sr2</item>
+	    <item>.srf</item>
+	    <item>.srw</item>
+	    <item>.x3f</item>
+	    <item>.png</item>
+	    <item>.gif</item>
+	    <item>.bmp</item>
+	    <item>.dib</item>
+	    <item>.ppm</item>
+	    <item>.pgm</item>
+	    <item>.pbm</item>
+	    <item>.pnm</item>
+	    <item>.webp</item>
+	    <item>.hdp</item>
+	    <item>.jxr</item>
+	    <item>.wdp</item>
+	    <item>.tpic</item>
+	    <item>.pcx</item>
+	    <item>.ecw</item>
+	    <item>.sid</item>
+	    <item>.fits</item>
+	    <item>.pgf</item>
+	    <item>.xcf</item>
+	</string-array>
+</resources>

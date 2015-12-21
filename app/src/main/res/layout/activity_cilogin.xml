@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_padding_medium1"
+        android:adjustViewBounds="true"
+        android:contentDescription="logo"
+        android:background="@mipmap/ic_login_logo"
+        android:layout_above="@+id/rlForm"
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:id="@+id/rlForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding_medium1"
+        android:paddingBottom="@dimen/common_padding_medium1"
+        android:paddingLeft="@dimen/common_padding_large"
+        android:paddingRight="@dimen/common_padding_large"
+        android:layout_centerInParent="true">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:hint="@string/login_fullname"
+            android:paddingLeft="@dimen/common_padding_small1"
+            android:paddingRight="@dimen/common_padding_small2"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_person_white"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black_translucent"
+            android:drawablePadding="@dimen/common_padding_small1"
+            android:textSize="@dimen/font_medium"/>
+
+        <LinearLayout
+            android:id="@+id/llCountryCode"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/etFullName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etCountryCode"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:paddingLeft="@dimen/common_padding_small1"
+                android:paddingRight="@dimen/common_padding_small1"
+                android:singleLine="true"
+                android:text="+223"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_translucent"
+                android:textSize="@dimen/font_medium"
+                android:drawableLeft="@mipmap/ic_login_phone"
+                android:drawablePadding="@dimen/common_padding_small1"
+                android:visibility="gone"
+                tools:ignore="HardcodedText,SpUsage,RtlHardcoded" >
+
+            </android.support.v7.widget.AppCompatEditText>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/common_padding_small2"
+                android:src="@mipmap/ic_login_phone"/>
+
+            <Spinner
+                android:id="@+id/spCountry"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:dropDownWidth="200dp"/>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/login_mobile_number"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_translucent"
+                android:textSize="@dimen/font_medium" >
+            </android.support.v7.widget.AppCompatEditText>
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llCountryCode"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="By continuing, you are indicating that you agree to our Terms of Use and Privacy Policy"
+            android:textColor="#A29F9E"
+            android:textSize="12dp"
+            android:lineSpacingMultiplier="1"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/brSignup"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_alignRight="@+id/llCountryCode"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@+id/tvTerms"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/common_padding_medium2"
+            android:text="Sign Up"
+            android:color="@color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

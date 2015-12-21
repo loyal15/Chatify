@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_medium1"
+        android:layout_marginRight="@dimen/common_padding_medium1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_padding_large"
+        android:hint="@string/contactus_fullname"
+        android:textColorHint="@color/grey"
+        android:singleLine="true"
+        android:textSize="@dimen/font_medium"
+        app:met_baseColor="@color/colorPrimaryDark"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimaryDark"
+        app:met_singleLineEllipsis="true"
+        app:met_maxCharacters="50"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_medium1"
+        android:layout_marginRight="@dimen/common_padding_medium1"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/contactus_email"
+        android:textColorHint="@color/grey"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:textSize="@dimen/font_medium"
+        app:met_baseColor="@color/colorPrimaryDark"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimaryDark"
+        app:met_singleLineEllipsis="true"
+        app:met_maxCharacters="50"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_medium1"
+        android:layout_marginRight="@dimen/common_padding_medium1"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="@color/grey"
+        android:hint="@string/contactus_phone_number"
+        android:singleLine="true"
+        android:textSize="@dimen/font_medium"
+        android:inputType="phone"
+        app:met_baseColor="@color/colorPrimaryDark"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimaryDark"
+        app:met_singleLineEllipsis="true"
+        app:met_maxCharacters="10"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_medium1"
+        android:layout_marginRight="@dimen/common_padding_medium1"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="@color/grey"
+        android:hint="@string/contactus_subject"
+        android:singleLine="true"
+        android:textSize="@dimen/font_medium"
+        app:met_baseColor="@color/colorPrimaryDark"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimaryDark"
+        app:met_singleLineEllipsis="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_medium1"
+        android:layout_marginRight="@dimen/common_padding_medium1"
+        android:id="@+id/spReason"></Spinner>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="@dimen/common_padding_medium1"
+        android:layout_marginRight="@dimen/common_padding_medium1"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="@color/grey"
+        android:gravity="top"
+        android:hint="@string/contactus_yourmessage"
+        android:singleLine="false"
+        android:textSize="@dimen/font_medium"
+        app:met_baseColor="@color/colorPrimaryDark"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimaryDark"
+        app:met_singleLineEllipsis="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_padding_medium"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/brClearAll"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_alignRight="@+id/llCountryCode"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:text="@string/tag_business_clear"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/btSubmit"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/tag_business_send"
+            android:background="@color/colorPrimaryDark"
+            android:color="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/common_padding_small2"
+    android:paddingRight="@dimen/common_padding_small2"
+    android:paddingTop="@dimen/common_padding_medium"
+    android:paddingBottom="@dimen/common_padding_medium"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="@dimen/avatar_circle_small_width"
+        android:layout_height="@dimen/avatar_circle_small_width"
+        android:src="@mipmap/ic_chat_history_user"
+        android:layout_centerVertical="true"
+        android:id="@+id/ivProfile" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_padding_small2"
+        android:layout_marginLeft="@dimen/common_padding_medium"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ivProfile"
+        android:layout_toLeftOf="@+id/tvCreatedDate"
+        android:id="@+id/llContact">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvUserName"
+            android:textColor="@color/black"
+            fontPath="@string/font_roboto_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvLastMessage"
+            android:textColor="@color/black_translucent"
+            fontPath="@string/font_roboto_regular"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="@dimen/font_small0"
+        android:id="@+id/tvCreatedDate"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        fontPath="@string/font_roboto_regular"/>
+</RelativeLayout>

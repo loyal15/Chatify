@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="im.chatify" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+
+    <permission android:name="im.chatify.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="im.chatify.permissions.MAP_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="im.chatify.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="im.chatify.permission.C2D_MESSAGE" />
+    <uses-sdk tools:overrideLibrary="io.codetail.view"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".CIApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
+
+        <!--  -->
+        <uses-library android:name="com.google.android.maps" />
+        <!--uses-library android:name="com.google.android.maps" android:required="false" /-->
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA3iUv7tex7LBn6CrPvSmxdwS88qtzl7VE" />
+
+        <activity
+            android:name=".CISplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".page.signup.CILoginActivity"
+            android:label="@string/title_activity_cilogin"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".page.signup.CIProfileActivity"
+            android:label="@string/title_activity_ciprofile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".page.home.CIMainActivity"
+            android:label="@string/title_activity_cimain"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- <service -->
+        <!-- android:name=".service.xmpp.CISmackService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" > -->
+        <!-- </service> -->
+
+        <service android:name=".xabber.android.service.XabberService" />
+        <service
+            android:name=".xabber.android.service.SyncAdapterService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <service
+            android:name=".xabber.android.service.AccountAuthenticatorService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <receiver android:name=".xabber.android.receiver.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".xabber.android.receiver.ShutDownReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.QUICKBOOT_POWEROFF" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".common.memorize.MemorizingActivity" />
+        <activity
+            android:name=".page.chat.CIChatActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:screenOrientation="portrait"/>
+
+        <receiver android:name=".xabber.android.receiver.GoAwayReceiver" />
+        <receiver android:name=".xabber.android.receiver.GoXaReceiver" />
+        <receiver android:name=".xabber.android.receiver.ComposingPausedReceiver" />
+
+        <activity
+            android:name=".page.business.CIBusinessDetailActivity"
+            android:label="@string/title_activity_cibusiness_detail"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="im.chatify" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="im.chatify.service.gcm.CIGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="im.chatify.service.gcm.CIInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="im.chatify.service.gcm.CIRegistrationIntentService"
+            android:exported="false">
+        </service>
+
+    </application>
+
+</manifest>
