@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <string name="app_name">GPITCommon</string>
+
+    <!-- Common -->
+    <string name="sample">Sample</string>
+    
+    <!-- Dialog -->
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    
+    <!-- GPS ON/OFF -->
+    <string name="gps_on_title">GPS</string>
+    <string name="gps_on_description">May I use your location?</string>
+    <string name="gps_ok">OK</string>
+    <string name="gps_cancel">Cancel</string>
+    
+    <!-- SNS -->    
+    <string name="waiting">Please wait...</string>
+    <string name="close">Close</string>
+    <string name="sharedonfacebook">Your Facebook post was created successfully.</string>
+    <string name="shareerrorfacebook">Your Facebook post was failed.</string>
+    <string name="sharedontwitter">Your Twitter status was updated successfully.</string>
+    <string name="shareerrortwitter">Your Twitter status was failed to update.</string>
+    <string name="twitter">Twitter</string>
+    
+    <!-- Pull List -->
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+    
+    <!-- file -->
+    <string name="msg_cannot_open_file">Can\'t open files</string>
+    
+    <!-- ****************** Customized Component ****************** -->
+    <!-- Select Date Dialog -->
+    <string name="select_date_dlg_title">Select Date</string>
+    
+</resources>

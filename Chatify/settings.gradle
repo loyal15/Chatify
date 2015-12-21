@@ -1,0 +1,2 @@
+include ':app', ':codeinputlib', ':materialdialog', ':progresswheel', ':supertoasts', ':preferencefragment', ':MaterialTabsModule', ':otr4j', ':SectionedListView', ':circualreveal'
+include ':gpitcommon_chatify'

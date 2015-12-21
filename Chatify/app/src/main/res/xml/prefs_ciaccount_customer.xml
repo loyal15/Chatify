@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <com.jenzz.materialpreference.PreferenceCategory android:title="@string/account_profile">
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfileFullName"/>
+        <com.jenzz.materialpreference.Preference
+            android:key="pfProfilePhoneNum" />
+    </com.jenzz.materialpreference.PreferenceCategory>
+
+    <com.jenzz.materialpreference.PreferenceCategory android:title="@string/account_setting">
+
+        <com.jenzz.materialpreference.SwitchPreference
+            android:key="pfSettingNotification"
+            android:title="@string/account_setting_notifications"
+            />
+        <com.jenzz.materialpreference.SwitchPreference
+            android:key="pfSettingSound"
+            android:title="@string/account_setting_sound"
+            />
+    </com.jenzz.materialpreference.PreferenceCategory>
+
+    <com.jenzz.materialpreference.PreferenceCategory android:title="@string/account_account">
+        <com.jenzz.materialpreference.Preference
+            android:key="pfAccountDeleteAccount"
+            android:title="@string/account_account_delete_account"/>
+    </com.jenzz.materialpreference.PreferenceCategory>
+
+</PreferenceScreen>

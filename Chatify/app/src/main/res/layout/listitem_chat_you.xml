@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingPrefix"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_medium1"
+        android:layout_marginTop="@dimen/common_padding_small1"
+        android:layout_marginBottom="@dimen/common_padding_small1"
+        android:layout_marginRight="@dimen/common_padding_small1"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_chat_bubble_you"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginRight="@dimen/common_padding_medium"
+            android:layout_marginLeft="@dimen/common_padding_small1"
+            android:layout_marginTop="@dimen/common_padding_small1"
+            android:layout_marginBottom="@dimen/common_padding_small1"
+            android:padding="@dimen/common_padding_small0"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:layout_weight="1"
+                android:textSize="@dimen/font_small0"
+                android:layout_centerVertical="true"
+                android:id="@+id/tvMeasureCreatedDate"
+                fontPath="@string/font_roboto_regular"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small1"
+                android:layout_marginRight="@dimen/common_padding_small1"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:id="@+id/ivMeasureSentFlag"
+                android:src="@mipmap/ic_chat_flag_sent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/common_padding_medium"
+            android:layout_marginLeft="@dimen/common_padding_small1"
+            android:layout_marginTop="@dimen/common_padding_small1"
+            android:layout_marginBottom="@dimen/common_padding_small1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_small0"
+                android:text="Hi asdfasd fasd asdfas dfas dasd fasdfasdf asdfas dfasdfasdf asdf asdf dsaf asdfa sdf"
+                android:textSize="@dimen/font_medium"
+                android:id="@+id/tvMessage"
+                fontPath="@string/font_roboto_regular"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/common_padding_small0"
+                android:layout_marginTop="@dimen/common_padding_small0"
+                android:layout_marginBottom="@dimen/common_padding_small0">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_small0"
+                    android:id="@+id/tvCreatedDate"
+                    fontPath="@string/font_roboto_regular"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_padding_small1"
+                    android:layout_marginRight="@dimen/common_padding_small1"
+                    android:layout_gravity="end|center_vertical"
+                    android:id="@+id/ivSentFlag"
+                    android:src="@mipmap/ic_chat_flag_sent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

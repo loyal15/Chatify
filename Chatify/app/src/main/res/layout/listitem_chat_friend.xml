@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingPrefix"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_small1"
+        android:layout_marginRight="@dimen/common_padding_medium1"
+        android:layout_marginTop="@dimen/common_padding_small2"
+        android:layout_marginBottom="@dimen/common_padding_small2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_chat_bubble_friend"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_padding_medium1"
+            android:layout_marginRight="@dimen/common_padding_small2"
+            android:layout_marginTop="@dimen/common_padding_small1"
+            android:layout_marginBottom="@dimen/common_padding_small1"
+            android:padding="@dimen/common_padding_small0"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="@dimen/font_small0"
+                android:layout_centerVertical="true"
+                android:id="@+id/tvMeasureCreatedDate"
+                fontPath="@string/font_roboto_regular"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small1"
+                android:layout_marginRight="@dimen/common_padding_small1"
+                android:id="@+id/ivMeasureSentFlag"
+                android:visibility="gone"
+                android:src="@mipmap/ic_chat_flag_sent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_padding_medium1"
+            android:layout_marginRight="@dimen/common_padding_small2"
+            android:layout_marginTop="@dimen/common_padding_small1"
+            android:layout_marginBottom="@dimen/common_padding_small1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_small0"
+                android:text="Hi"
+                android:textSize="@dimen/font_medium"
+                android:id="@+id/tvMessage"
+                android:autoLink="all"
+                fontPath="@string/font_roboto_regular"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_padding_small0"
+                android:layout_marginTop="@dimen/common_padding_small0"
+                android:layout_marginBottom="@dimen/common_padding_small0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:textSize="@dimen/font_small0"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tvCreatedDate"
+                    fontPath="@string/font_roboto_regular"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_padding_small1"
+                    android:layout_marginRight="@dimen/common_padding_small1"
+                    android:id="@+id/ivSentFlag"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_chat_flag_sent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
